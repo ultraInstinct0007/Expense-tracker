@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+
+h1,h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.input-selection{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.input-selection label{
+    font-weight: bold;
+    
+}
+
+.input-selection input[type ="number"] , .input-selection input[type="date"]{
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#add-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(20, 229, 51);
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+}
+
+#add-btn:hover {
+    background-color: rgb(19, 208, 48);
+
+}
+
+.expense-list{
+    margin: 20px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th{
+    background-color:  rgb(20, 229, 51);
+    color: #fff;
+}
+tfoot,td{
+    font-weight: bold;
+}
+
+.delete-btn{
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
