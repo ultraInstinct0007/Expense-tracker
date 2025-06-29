@@ -1,0 +1,144 @@
+/* -------------- Base styles -------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Headings ---------- */
+.title{
+    text-align: center;
+    margin: 40px 0 24px;
+}
+
+/* ---------- input area ---------- */
+.input-selection{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;      /* keeps labels tight to controls */
+    justify-content: center;
+    flex-wrap: wrap;            /* lets items wrap even on tablets */
+    gap: 24px;
+    padding: 0 24px;
+}
+
+.input-selection label{
+    font-weight: 600;
+}
+
+.input-selection select,
+.input-selection input[type="number"],
+.input-selection input[type="date"]{
+    padding: 6px 10px;
+    min-width: 140px;
+}
+
+#add-btn{
+    background: rgb(20, 229, 51);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+#add-btn:hover{
+    background: rgb(19, 208, 48);
+}
+
+/* ---------- table ---------- */
+.expense-list{
+    margin: 24px;
+    overflow-x: auto;           /* enables sideways scroll on tiny screens */
+}
+
+table{
+    width: 100%;
+    min-width: 460px;           /* prevents columns collapsing too tightly */
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+th{
+    background: rgb(20, 229, 51);
+    color: #fff;
+}
+
+tfoot td{
+    font-weight: 700;
+}
+
+.delete-btn{
+    padding: 6px 12px;
+    background: #f44336;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* -------------- Responsive tweaks -------------- */
+
+
+@media (max-width: 768px){
+    .title{margin: 32px 0 20px;}
+
+    .input-selection{
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .input-selection select,
+    .input-selection input[type="number"],
+    .input-selection input[type="date"],
+    #add-btn{
+        flex: 1 1 45%;
+    }
+
+    th,td{
+        font-size: .95rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px){
+    .input-selection{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .input-selection select,
+    .input-selection input[type="number"],
+    .input-selection input[type="date"],
+    #add-btn{
+        width: 100%;
+        min-width: 0;
+    }
+
+    #add-btn{
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    th,td{
+        font-size: .85rem;
+        padding: 6px;
+    }
+}
